@@ -19,9 +19,12 @@ body {
   background-color: white;
 }
 
+.container-fluid {
+  z-index: 100;
+}
+
 nav {
   background-color: rgba(76, 182, 198, 0.2);
-  z-index: 100;
 }
 
 nav div a {
