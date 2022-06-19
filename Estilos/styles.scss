@@ -3,33 +3,36 @@
     padding: 0;
     box-sizing: border-box;
 }
-:root{
-    --font1:'Fascinate Inline', cursive;
-    --font2:"Rubik Puddles", cursive;
-    --font3: 'Courier New', Courier, monospace;
-    --azulC:#4ae7ff;
-    --azulF:#0f206c;
-    --blanc:white;
-    --Negro:black;
-  
-}  
+
+$font1:'Fascinate Inline', cursive;
+$font2:"Rubik Puddles", cursive;
+$font3: 'Courier New', Courier, monospace;
+$azulC:#4ae7ff;
+$azulF:#0f206c;
+$blanc:white;
+$Negro:black;
+$azulcl:rgba(76, 182, 198,.2);
+$gris:rgba(242,242,242,.4);
+$colorf:rgb(242,242,242);
+
+
+
+
 body{
-        background-color: rgb(255, 255, 255);
+        background-color: $blanc;
         
     }
-.container-fluid{
-    z-index: 100;
-}
+
 
 nav{ 
-    background-color: rgba(76, 182, 198,.2);
+    background-color: $azulcl;
     
     
     div{
 
       a{
 
-        font-family: var(--font1);
+        font-family: $font1;
 
         } 
          div{
@@ -37,8 +40,8 @@ nav{
             ul{
                 li{
                     a{
-                        font-family: var(--font2);
-                        color: var(--blanc);
+                        font-family: $font2;
+                        color: $blanc;
                     }
                 }
             }
@@ -49,7 +52,7 @@ nav{
 .container-slider{
     padding: 0;
     margin: auto;
-    background-color: white;
+    background-color: $blanc;
     width: 600px;
     overflow: hidden;
     ul{
@@ -65,7 +68,7 @@ nav{
         li{
             width:100%;
             height: inherit;
-            background-color: white;
+            background-color: $blanc;
             margin: 50px;
             padding: 10px;
 
@@ -125,9 +128,11 @@ nav{
     padding: 0;
     box-sizing: border-box;
     }
+    
     /*======================INDEX======================*/
     .contenido{
         width: 100%;
+        height: auto;
         margin: 0;
         display: grid;
         grid-template-columns: auto auto;
@@ -140,10 +145,10 @@ nav{
         
         
         .container-slider{
-            border: 5px solid black;
+            border: 5px solid $Negro;
             padding: 0;
             margin: 0;
-            background-color: white;
+            background-color: $blanc;
             width: 400px;
             overflow: hidden;
 
@@ -161,7 +166,7 @@ nav{
                 li{
                     width:100%;
                     height: inherit;
-                    background-color: white;
+                    background-color: $blanc;
                     margin: 30px;
                     padding: 5px;
         
@@ -187,8 +192,8 @@ nav{
         h1{
             animation-duration: 1s;
             align-items: center;
-            border-top: 5px double var(--azulC);
-            border-bottom:5px double var(--azulC);
+            border-top: 5px double $azulC;
+            border-bottom:5px double $azulC;
             span{
                     --total: calc(var(--duration)
             + var(--delay));
@@ -199,7 +204,7 @@ nav{
             animation: revealText 1s
             var(--total)forwards;
             z-index: -10;
-            font-family: var(--font2);
+            font-family: $font2;
             font-weight: bold;
             text-align: center;
             
@@ -256,13 +261,13 @@ nav{
         span{
             display: block;
             text-align: center;
-            font-family: var(--font1);
+            font-family: $font1;
             font-size: 1.6rem;
         }
         p{  
             padding: auto;
             margin: 40px;
-            font-family: var(--font2);
+            font-family: $font2;
             letter-spacing: 2px;
         }
 
@@ -271,20 +276,20 @@ nav{
 
     /*======================MENU======================*/
     .menu{
-        background-color: rgb(242, 242, 242);
+        background-color: $colorf;
         margin-top: 5px;
-        border: 1px solid var(--azulC);
+        border: 1px solid $azulC;
         a{
             text-align: center;
-            border-bottom: 2px double var(--azulC);
+            border-bottom: 2px double $azulC;
             i{
                 font-size: 4rem;
-                color: var(--Negro);
+                color: $Negro;
             }
         }
         p{
             font-size: 1.2rem;
-            font-family: var(--font2);
+            font-family: $font2;
             text-align: center;
             font-weight: bold;
         }
@@ -294,26 +299,26 @@ nav{
         p{
             text-align: center;
             font-size: 1.4rem;
-            font-family: var(--font3);
+            font-family: $font3;
             span{
                 font-size: 1rem;
-                font-family: var(--font2);
+                font-family: $font2;
                 
             }
         }
         .resetas{
             div{
                 
-                background-color: rgb(242, 242,242);
+                background-color: $colorf;
                 margin: 5px;
-                border: 1px solid var(--azulC);
+                border: 1px solid $azulC;
                 p:first-child{
                     font-size: 1rem;
-                    font-family: var(--font2);
+                    font-family: $font2;
                     font-weight: bold;
                     span{
                         font-size: 1.3rem;
-                        font-family: var(--font1);
+                        font-family: $font1;
                     }
                 }
                 p:last-child{
@@ -338,8 +343,8 @@ nav{
             width: 60%;
             margin: auto;
             font-size: 1.8rem;
-            font-family: var(--font2);
-            border-bottom:5px double var(--azulC) ;
+            font-family: $font2;
+            border-bottom:5px double $azulC ;
         }
 
         div{
@@ -350,13 +355,13 @@ nav{
             align-items: center;
             justify-content: center;
             border-radius: 10px;
-            background-color: rgba(242,242,242,.4);
+            background-color: $gris;
             cursor: pointer;
             p{
                 text-align: center;
                 font-size: 1.6rem;
                 letter-spacing: 7px;
-                font-family: var(--font3);
+                font-family: $font3;
                 font-weight: bold;
                 
             }
@@ -372,12 +377,12 @@ nav{
             flex-direction: column;
             p{
                 font-size: 1.8rem;
-                font-family: var(--font1);
+                font-family: $font1;
                 font-weight: bold;
                 text-align: center;
             }
             div{
-                background-color: rgb(242,242,242);
+                background-color: $colorf;
                 width: 100%;
                 height: 400px;
                 margin: 10px 0 10px 0;
@@ -392,12 +397,12 @@ nav{
                     width: 100%;
                     height: 20%;
                     font-size: 1.2rem;
-                    font-family: var(--font3);
+                    font-family: $font3;
                     font-weight: 500;
                     span{
                         display: block;
                         font-size: 1rem;
-                        font-family: var(--font2);
+                        font-family: $font2;
                         font-weight: 900;
                     }
                 }
@@ -416,12 +421,12 @@ nav{
         h1{
             text-align: center;
             font-size: 1.3rem;
-            font-family: var(--font2);
-            background-color: rgb(242, 242, 242);
+            font-family: $font2;
+            background-color: $colorf;
 
             p{
                 font-size: 1rem;
-                font-family: var(--font3);
+                font-family: $font3;
                 font-weight: bold;
             }
             
@@ -430,7 +435,7 @@ nav{
             display: flex;
             flex-direction: column;
             align-items: center;
-            background-color: rgb(242,242,242);
+            background-color: $colorf;
             padding: 10px;
             
             h2{
@@ -441,7 +446,7 @@ nav{
             p{ 
                 text-align: center;
                 width:70%;
-                border-bottom: 3px double var(--azulC);
+                border-bottom: 3px double $azulC;
             }
             button{
                 cursor: pointer;
@@ -453,15 +458,16 @@ nav{
 
     .contacto{
         width: 100%;
-        border: 4px solid var(--azulC);
+        border: 4px solid $azulC;
         margin: 10px 0px;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        background-color: $colorf;
         div{
             width: 50%;
-            border-bottom: 3px double var(--azulC);
+            border-bottom: 3px double $azulC;
             p{
                 text-align: center;
                 
@@ -474,12 +480,12 @@ nav{
     /*============FACTURAS===============*/
 
     .facturas{
-        background-color: rgb(242,242,242);
+        background-color: $colorf;
         width: 100%;
         margin: 25px auto;
         .row{
             width: 90%;
-            border-bottom: 4px double var(--azulC);
+            border-bottom: 4px double $azulC;
             margin: 25px auto;
             p:first-child{
                 font-weight: bold;
@@ -487,7 +493,7 @@ nav{
             p{
                 text-align: center;
                 font-size: 1.1rem;
-                font-family: var(--font3);
+                font-family: $font3;
                 margin-top: 5px;
             }
             form{
@@ -523,7 +529,7 @@ nav{
         flex-wrap: wrap;
         width: 100%;
         height: 250px;
-        background-color: var(--azulC);
+        background-color: $azulC;
         margin-bottom: 0;
         padding-bottom: 0;
         z-index: 100;
@@ -532,9 +538,9 @@ nav{
         .parrU{
             display: inline;
             font-size: .8em;
-            font-family: var(--font1);
-            border-bottom: 5px double var(--blanc);
-            color: var(--blanc);
+            font-family: $font1;
+            border-bottom: 5px double $blanc;
+            color: $blanc;
             margin: 10px;
         }
 
@@ -553,9 +559,9 @@ nav{
                     align-items: center;
                     justify-content: center;
                     font-size: 26px;
-                    color: var(--blanc);
+                    color: $blanc;
                     border-radius: 50%;
-                    outline: 2px solid var(--blanc);
+                    outline: 2px solid $blanc;
                     transition-property: outline-offset, outline-color, background-color;
                     transition-duration: .25s;
 
@@ -596,7 +602,7 @@ nav{
 
         a{
             text-decoration: none;
-            color: var(--blanc);
+            color: $blanc;
         }
         .parrD{
             font-size: .9rem;
@@ -693,7 +699,7 @@ nav{
             width: 50%;
             grid-area: texto;
             margin: 50px auto;
-            border-bottom: 5px double var(--azulC);
+            border-bottom: 5px double $azulC;
 
         }
         .helados{
@@ -746,7 +752,7 @@ nav{
     .contenido{
         width: 90%;
         margin: auto;
-        background-color: rgb(242,242,242);
+        background-color: $colorf;
         display: grid;
         grid-template-columns: 50% 50%;
         grid-template-rows: auto auto;

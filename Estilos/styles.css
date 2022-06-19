@@ -5,22 +5,8 @@
           box-sizing: border-box;
 }
 
-:root {
-  --font1:'Fascinate Inline', cursive;
-  --font2:"Rubik Puddles", cursive;
-  --font3: 'Courier New', Courier, monospace;
-  --azulC:#4ae7ff;
-  --azulF:#0f206c;
-  --blanc:white;
-  --Negro:black;
-}
-
 body {
   background-color: white;
-}
-
-.container-fluid {
-  z-index: 100;
 }
 
 nav {
@@ -28,12 +14,12 @@ nav {
 }
 
 nav div a {
-  font-family: var(--font1);
+  font-family: "Fascinate Inline", cursive;
 }
 
 nav div div ul li a {
-  font-family: var(--font2);
-  color: var(--blanc);
+  font-family: "Rubik Puddles", cursive;
+  color: white;
 }
 
 .container-slider {
@@ -137,6 +123,7 @@ nav div div ul li a {
   /*======================INDEX======================*/
   .contenido {
     width: 100%;
+    height: auto;
     margin: 0;
     display: -ms-grid;
     display: grid;
@@ -195,8 +182,8 @@ nav div div ul li a {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    border-top: 5px double var(--azulC);
-    border-bottom: 5px double var(--azulC);
+    border-top: 5px double #4ae7ff;
+    border-bottom: 5px double #4ae7ff;
   }
   .parrafo h1 span {
     --total: calc(var(--duration)
@@ -208,7 +195,7 @@ nav div div ul li a {
     -webkit-animation: revealText 1s var(--total) forwards;
             animation: revealText 1s var(--total) forwards;
     z-index: -10;
-    font-family: var(--font2);
+    font-family: "Rubik Puddles", cursive;
     font-weight: bold;
     text-align: center;
   }
@@ -293,32 +280,32 @@ nav div div ul li a {
   .mensaje span {
     display: block;
     text-align: center;
-    font-family: var(--font1);
+    font-family: "Fascinate Inline", cursive;
     font-size: 1.6rem;
   }
   .mensaje p {
     padding: auto;
     margin: 40px;
-    font-family: var(--font2);
+    font-family: "Rubik Puddles", cursive;
     letter-spacing: 2px;
   }
   /*======================MENU======================*/
   .menu {
     background-color: #f2f2f2;
     margin-top: 5px;
-    border: 1px solid var(--azulC);
+    border: 1px solid #4ae7ff;
   }
   .menu a {
     text-align: center;
-    border-bottom: 2px double var(--azulC);
+    border-bottom: 2px double #4ae7ff;
   }
   .menu a i {
     font-size: 4rem;
-    color: var(--Negro);
+    color: black;
   }
   .menu p {
     font-size: 1.2rem;
-    font-family: var(--font2);
+    font-family: "Rubik Puddles", cursive;
     text-align: center;
     font-weight: bold;
   }
@@ -328,25 +315,25 @@ nav div div ul li a {
   .carta p {
     text-align: center;
     font-size: 1.4rem;
-    font-family: var(--font3);
+    font-family: "Courier New", Courier, monospace;
   }
   .carta p span {
     font-size: 1rem;
-    font-family: var(--font2);
+    font-family: "Rubik Puddles", cursive;
   }
   .carta .resetas div {
     background-color: #f2f2f2;
     margin: 5px;
-    border: 1px solid var(--azulC);
+    border: 1px solid #4ae7ff;
   }
   .carta .resetas div p:first-child {
     font-size: 1rem;
-    font-family: var(--font2);
+    font-family: "Rubik Puddles", cursive;
     font-weight: bold;
   }
   .carta .resetas div p:first-child span {
     font-size: 1.3rem;
-    font-family: var(--font1);
+    font-family: "Fascinate Inline", cursive;
   }
   .carta .resetas div p:last-child {
     font-size: .8rem;
@@ -368,8 +355,8 @@ nav div div ul li a {
     width: 60%;
     margin: auto;
     font-size: 1.8rem;
-    font-family: var(--font2);
-    border-bottom: 5px double var(--azulC);
+    font-family: "Rubik Puddles", cursive;
+    border-bottom: 5px double #4ae7ff;
   }
   .postre div {
     width: 90%;
@@ -392,7 +379,7 @@ nav div div ul li a {
     text-align: center;
     font-size: 1.6rem;
     letter-spacing: 7px;
-    font-family: var(--font3);
+    font-family: "Courier New", Courier, monospace;
     font-weight: bold;
   }
   /*============NSOTROS===============*/
@@ -411,7 +398,7 @@ nav div div ul li a {
   }
   .nosotros div p {
     font-size: 1.8rem;
-    font-family: var(--font1);
+    font-family: "Fascinate Inline", cursive;
     font-weight: bold;
     text-align: center;
   }
@@ -433,13 +420,13 @@ nav div div ul li a {
     width: 100%;
     height: 20%;
     font-size: 1.2rem;
-    font-family: var(--font3);
+    font-family: "Courier New", Courier, monospace;
     font-weight: 500;
   }
   .nosotros div div p span {
     display: block;
     font-size: 1rem;
-    font-family: var(--font2);
+    font-family: "Rubik Puddles", cursive;
     font-weight: 900;
   }
   /*============HORARIOS===============*/
@@ -457,12 +444,12 @@ nav div div ul li a {
   .horarios h1 {
     text-align: center;
     font-size: 1.3rem;
-    font-family: var(--font2);
+    font-family: "Rubik Puddles", cursive;
     background-color: #f2f2f2;
   }
   .horarios h1 p {
     font-size: 1rem;
-    font-family: var(--font3);
+    font-family: "Courier New", Courier, monospace;
     font-weight: bold;
   }
   .horarios div {
@@ -487,7 +474,7 @@ nav div div ul li a {
   .horarios div p {
     text-align: center;
     width: 70%;
-    border-bottom: 3px double var(--azulC);
+    border-bottom: 3px double #4ae7ff;
   }
   .horarios div button {
     cursor: pointer;
@@ -495,7 +482,7 @@ nav div div ul li a {
   /*============CONTACTO===============*/
   .contacto {
     width: 100%;
-    border: 4px solid var(--azulC);
+    border: 4px solid #4ae7ff;
     margin: 10px 0px;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -510,10 +497,11 @@ nav div div ul li a {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+    background-color: #f2f2f2;
   }
   .contacto div {
     width: 50%;
-    border-bottom: 3px double var(--azulC);
+    border-bottom: 3px double #4ae7ff;
   }
   .contacto div p {
     text-align: center;
@@ -526,7 +514,7 @@ nav div div ul li a {
   }
   .facturas .row {
     width: 90%;
-    border-bottom: 4px double var(--azulC);
+    border-bottom: 4px double #4ae7ff;
     margin: 25px auto;
   }
   .facturas .row p:first-child {
@@ -535,7 +523,7 @@ nav div div ul li a {
   .facturas .row p {
     text-align: center;
     font-size: 1.1rem;
-    font-family: var(--font3);
+    font-family: "Courier New", Courier, monospace;
     margin-top: 5px;
   }
   .facturas .row form {
@@ -571,7 +559,7 @@ nav div div ul li a {
         flex-wrap: wrap;
     width: 100%;
     height: 250px;
-    background-color: var(--azulC);
+    background-color: #4ae7ff;
     margin-bottom: 0;
     padding-bottom: 0;
     z-index: 100;
@@ -579,9 +567,9 @@ nav div div ul li a {
   footer .parrU {
     display: inline;
     font-size: .8em;
-    font-family: var(--font1);
-    border-bottom: 5px double var(--blanc);
-    color: var(--blanc);
+    font-family: "Fascinate Inline", cursive;
+    border-bottom: 5px double white;
+    color: white;
     margin: 10px;
   }
   footer ul {
@@ -613,9 +601,9 @@ nav div div ul li a {
         -ms-flex-pack: center;
             justify-content: center;
     font-size: 26px;
-    color: var(--blanc);
+    color: white;
     border-radius: 50%;
-    outline: 2px solid var(--blanc);
+    outline: 2px solid white;
     -webkit-transition-property: outline-offset, outline-color, background-color;
     transition-property: outline-offset, outline-color, background-color;
     -webkit-transition-duration: .25s;
@@ -678,7 +666,7 @@ nav div div ul li a {
   }
   footer a {
     text-decoration: none;
-    color: var(--blanc);
+    color: white;
   }
   footer .parrD {
     font-size: .9rem;
@@ -795,7 +783,7 @@ nav div div ul li a {
     -ms-grid-column-span: 2;
     grid-area: texto;
     margin: 50px auto;
-    border-bottom: 5px double var(--azulC);
+    border-bottom: 5px double #4ae7ff;
   }
   .postre .helados {
     -ms-grid-row: 2;
