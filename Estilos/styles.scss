@@ -1,6 +1,7 @@
 @import "../archivoSCSS/variables";
 @import "../archivoSCSS/querie";
 @import "../archivoSCSS/mixin";
+@import "../archivoSCSS/extends";
 
 
 *{
@@ -113,3 +114,15 @@ nav{
 
 }
 
+
+/*EXTENDS*/
+
+.parrafo{
+    @extend .textos;
+}
+.resetas p:first-child{
+    @extend .textos;
+}
+.menu p{
+     @extend .textos;
+}

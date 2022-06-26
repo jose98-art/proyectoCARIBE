@@ -7,12 +7,10 @@ $azulcl:rgba(76, 182, 198,.2); se reemplaso este variable en el mapa
 */
 /*VARIABLES PARA LAS OPERACIONES*/
 /*MAPAS:  este mapa se lo aplique al nav y al footer */
-/*TEMAS A INCLUIR PARA LA ENTREGA --MAPA CON MAP-GET, MIXIN Y REUTILIZAR EL CODIGO, EXTEND MODIFICANDO UNA O MAS CLACES, MODIFICACIONES NESESARIAS PARA MEJORAR EL SEO,*/
 /*MAPA -MAP-GET  √  */
 /*MIIXN - REUTILIZANDO CODIGO  √ */
-/*EXTEND MODIFICANDO UNO O MAS CLACES  */
-/*SEO  */
-/*INSERTAR LOS KEYWORDS, DESCRIPCION, TITULOS Y ENCABEZADO A TODAS LAS PAGINAS*/
+/*EXTEND MODIFICANDO UNO O MAS CLACES √ */
+/*SEO √ */
 /*EXPLICAR LOS CAMBIOS REALIZADOS E INCLUIR EL LINK DEL REPOSITORIO*/
 /*
 $azulC:#4ae7ff; se reemplaso este variable en el mapa 
@@ -22,13 +20,12 @@ $azulcl:rgba(76, 182, 198,.2); se reemplaso este variable en el mapa
 */
 /*VARIABLES PARA LAS OPERACIONES*/
 /*MAPAS:  este mapa se lo aplique al nav y al footer */
-/*TEMAS A INCLUIR PARA LA ENTREGA --MAPA CON MAP-GET, MIXIN Y REUTILIZAR EL CODIGO, EXTEND MODIFICANDO UNA O MAS CLACES, MODIFICACIONES NESESARIAS PARA MEJORAR EL SEO,*/
 /*MAPA -MAP-GET  √  */
 /*MIIXN - REUTILIZANDO CODIGO  √ */
-/*EXTEND MODIFICANDO UNO O MAS CLACES  */
-/*SEO  */
-/*INSERTAR LOS KEYWORDS, DESCRIPCION, TITULOS Y ENCABEZADO A TODAS LAS PAGINAS*/
+/*EXTEND MODIFICANDO UNO O MAS CLACES √ */
+/*SEO √ */
 /*EXPLICAR LOS CAMBIOS REALIZADOS E INCLUIR EL LINK DEL REPOSITORIO*/
+/*ESTE MIXIN LO UTILICE PARA LOS ESTILOS DE LA ETIQUETA P CON LA CLECE MENSAJE */
 /* PARA PANTALLAS CHICAS DE 320PX*/
 @media screen and (min-width: 320px) {
   * {
@@ -112,9 +109,7 @@ $azulcl:rgba(76, 182, 198,.2); se reemplaso este variable en el mapa
     -webkit-animation: revealText 1s var(--total) forwards;
             animation: revealText 1s var(--total) forwards;
     z-index: -10;
-    font-family: "Rubik Puddles", cursive;
     font-weight: bold;
-    text-align: center;
   }
   .parrafo h1 span span::after {
     content: '';
@@ -231,8 +226,6 @@ $azulcl:rgba(76, 182, 198,.2); se reemplaso este variable en el mapa
   }
   .menu p {
     font-size: 1.2rem;
-    font-family: "Rubik Puddles", cursive;
-    text-align: center;
     font-weight: bold;
   }
   .carta {
@@ -254,7 +247,6 @@ $azulcl:rgba(76, 182, 198,.2); se reemplaso este variable en el mapa
   }
   .carta .resetas div p:first-child {
     font-size: 1rem;
-    font-family: "Rubik Puddles", cursive;
     font-weight: bold;
   }
   .carta .resetas div p:first-child span {
@@ -654,6 +646,27 @@ $azulcl:rgba(76, 182, 198,.2); se reemplaso este variable en el mapa
   }
 }
 
+/*ESTE MIXIN LO UTILICE PARA LOS ESTILOS DE LA ETIQUETA P CON LA CLECE MENSAJE */
+/*estilos generales para los textos*/
+/*
+$azulC:#4ae7ff; se reemplaso este variable en el mapa 
+*/
+/*
+$azulcl:rgba(76, 182, 198,.2); se reemplaso este variable en el mapa 
+*/
+/*VARIABLES PARA LAS OPERACIONES*/
+/*MAPAS:  este mapa se lo aplique al nav y al footer */
+/*MAPA -MAP-GET  √  */
+/*MIIXN - REUTILIZANDO CODIGO  √ */
+/*EXTEND MODIFICANDO UNO O MAS CLACES √ */
+/*SEO √ */
+/*EXPLICAR LOS CAMBIOS REALIZADOS E INCLUIR EL LINK DEL REPOSITORIO*/
+.textos, .parrafo, .resetas p:first-child, .menu p {
+  font-family: "Rubik Puddles", cursive;
+  color: black;
+  text-align: center;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -768,4 +781,6 @@ nav div div ul li a {
     margin-left: -300%;
   }
 }
+
+/*EXTENDS*/
 /*# sourceMappingURL=styles.css.map */
