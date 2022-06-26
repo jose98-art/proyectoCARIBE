@@ -1,118 +1,35 @@
-* {
-  margin: 0;
-  padding: 0;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-}
-
-body {
-  background-color: white;
-}
-
-nav {
-  background-color: rgba(76, 182, 198, 0.2);
-}
-
-nav div a {
-  font-family: "Fascinate Inline", cursive;
-}
-
-nav div div ul li a {
-  font-family: "Rubik Puddles", cursive;
-  color: white;
-}
-
-.container-slider {
-  padding: 0;
-  margin: auto;
-  background-color: white;
-  width: 600px;
-  overflow: hidden;
-}
-
-.container-slider ul li {
-  list-style: none;
-}
-
-.container-slider .slider {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-animation: cambio 20s infinite alternate linear;
-          animation: cambio 20s infinite alternate linear;
-  width: 400%;
-}
-
-.container-slider .slider li {
-  width: 100%;
-  height: inherit;
-  background-color: white;
-  margin: 50px;
-  padding: 10px;
-}
-
-.container-slider .slider li img {
-  width: 100%;
-  height: 300px;
-  -o-object-fit: cover;
-     object-fit: cover;
-  margin: auto;
-}
-
-@-webkit-keyframes cambio {
-  0% {
-    margin-left: 0;
-  }
-  20% {
-    margin-left: 0;
-  }
-  25% {
-    margin-left: -100%;
-  }
-  45% {
-    margin-left: -100%;
-  }
-  50% {
-    margin-left: -200%;
-  }
-  70% {
-    margin-left: -200%;
-  }
-  75% {
-    margin-left: -300%;
-  }
-  100% {
-    margin-left: -300%;
-  }
-}
-
-@keyframes cambio {
-  0% {
-    margin-left: 0;
-  }
-  20% {
-    margin-left: 0;
-  }
-  25% {
-    margin-left: -100%;
-  }
-  45% {
-    margin-left: -100%;
-  }
-  50% {
-    margin-left: -200%;
-  }
-  70% {
-    margin-left: -200%;
-  }
-  75% {
-    margin-left: -300%;
-  }
-  100% {
-    margin-left: -300%;
-  }
-}
-
+@charset "UTF-8";
+/*
+$azulC:#4ae7ff; se reemplaso este variable en el mapa 
+*/
+/*
+$azulcl:rgba(76, 182, 198,.2); se reemplaso este variable en el mapa 
+*/
+/*VARIABLES PARA LAS OPERACIONES*/
+/*MAPAS:  este mapa se lo aplique al nav y al footer */
+/*TEMAS A INCLUIR PARA LA ENTREGA --MAPA CON MAP-GET, MIXIN Y REUTILIZAR EL CODIGO, EXTEND MODIFICANDO UNA O MAS CLACES, MODIFICACIONES NESESARIAS PARA MEJORAR EL SEO,*/
+/*MAPA -MAP-GET  √  */
+/*MIIXN - REUTILIZANDO CODIGO  √ */
+/*EXTEND MODIFICANDO UNO O MAS CLACES  */
+/*SEO  */
+/*INSERTAR LOS KEYWORDS, DESCRIPCION, TITULOS Y ENCABEZADO A TODAS LAS PAGINAS*/
+/*EXPLICAR LOS CAMBIOS REALIZADOS E INCLUIR EL LINK DEL REPOSITORIO*/
+/*
+$azulC:#4ae7ff; se reemplaso este variable en el mapa 
+*/
+/*
+$azulcl:rgba(76, 182, 198,.2); se reemplaso este variable en el mapa 
+*/
+/*VARIABLES PARA LAS OPERACIONES*/
+/*MAPAS:  este mapa se lo aplique al nav y al footer */
+/*TEMAS A INCLUIR PARA LA ENTREGA --MAPA CON MAP-GET, MIXIN Y REUTILIZAR EL CODIGO, EXTEND MODIFICANDO UNA O MAS CLACES, MODIFICACIONES NESESARIAS PARA MEJORAR EL SEO,*/
+/*MAPA -MAP-GET  √  */
+/*MIIXN - REUTILIZANDO CODIGO  √ */
+/*EXTEND MODIFICANDO UNO O MAS CLACES  */
+/*SEO  */
+/*INSERTAR LOS KEYWORDS, DESCRIPCION, TITULOS Y ENCABEZADO A TODAS LAS PAGINAS*/
+/*EXPLICAR LOS CAMBIOS REALIZADOS E INCLUIR EL LINK DEL REPOSITORIO*/
+/* PARA PANTALLAS CHICAS DE 320PX*/
 @media screen and (min-width: 320px) {
   * {
     margin: 0;
@@ -276,6 +193,14 @@ nav div div ul li a {
     background-position: center;
     -o-object-fit: contain;
        object-fit: contain;
+    /*AL PARRAFO LE AGREGUE EL MIXIN y comente los valores ateriores*/
+    /*
+        p{  
+            padding: auto;
+            margin: 40px;
+            font-family: $font2;
+            letter-spacing: 2px;
+        }*/
   }
   .mensaje span {
     display: block;
@@ -288,6 +213,7 @@ nav div div ul li a {
     margin: 40px;
     font-family: "Rubik Puddles", cursive;
     letter-spacing: 2px;
+    color: black;
   }
   /*======================MENU======================*/
   .menu {
@@ -670,6 +596,176 @@ nav div div ul li a {
   }
   footer .parrD {
     font-size: .9rem;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .contenido {
+    width: 90%;
+    margin: auto;
+    background-color: #f2f2f2;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 50% 50%;
+        grid-template-columns: 50% 50%;
+    -ms-grid-rows: auto auto;
+        grid-template-rows: auto auto;
+        grid-template-areas: "parrafo  slider" "mensaje  mensaje";
+  }
+  .container-slider {
+    -ms-grid-row: 1;
+    -ms-grid-column: 2;
+    grid-area: slider;
+    margin: auto;
+    width: 100%;
+  }
+  .parrafo {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    grid-area: parrafo;
+    width: 100%;
+    margin: auto;
+    z-index: 1;
+  }
+  .mensaje {
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 2;
+    grid-area: mensaje;
+    margin: auto;
+    width: 50%;
+  }
+  .horarios h1 {
+    margin: 20px auto;
+    width: 70%;
+  }
+  .horarios div {
+    margin: 10px auto;
+    width: 70%;
+  }
+  .contacto {
+    width: 60%;
+    margin: 20px auto;
+  }
+  .facturas {
+    width: 50%;
+    padding: 50px;
+    margin: 100px auto;
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  background-color: white;
+}
+
+nav {
+  background-color: rgba(76, 182, 198, 0.2);
+}
+
+nav div a {
+  font-family: "Fascinate Inline", cursive;
+}
+
+nav div div ul li a {
+  font-family: "Rubik Puddles", cursive;
+  color: white;
+}
+
+.container-slider {
+  padding: 0;
+  margin: auto;
+  background-color: white;
+  width: 600px;
+  overflow: hidden;
+}
+
+.container-slider ul li {
+  list-style: none;
+}
+
+.container-slider .slider {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-animation: cambio 20s infinite alternate linear;
+          animation: cambio 20s infinite alternate linear;
+  width: 400%;
+}
+
+.container-slider .slider li {
+  width: 100%;
+  height: inherit;
+  background-color: white;
+  margin: 50px;
+  padding: 10px;
+}
+
+.container-slider .slider li img {
+  width: 100%;
+  height: 300px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  margin: auto;
+}
+
+@-webkit-keyframes cambio {
+  0% {
+    margin-left: 0;
+  }
+  20% {
+    margin-left: 0;
+  }
+  25% {
+    margin-left: -100%;
+  }
+  45% {
+    margin-left: -100%;
+  }
+  50% {
+    margin-left: -200%;
+  }
+  70% {
+    margin-left: -200%;
+  }
+  75% {
+    margin-left: -300%;
+  }
+  100% {
+    margin-left: -300%;
+  }
+}
+
+@keyframes cambio {
+  0% {
+    margin-left: 0;
+  }
+  20% {
+    margin-left: 0;
+  }
+  25% {
+    margin-left: -100%;
+  }
+  45% {
+    margin-left: -100%;
+  }
+  50% {
+    margin-left: -200%;
+  }
+  70% {
+    margin-left: -200%;
+  }
+  75% {
+    margin-left: -300%;
+  }
+  100% {
+    margin-left: -300%;
   }
 }
 /*# sourceMappingURL=styles.css.map */

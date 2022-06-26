@@ -1,141 +1,504 @@
 @import "../archivoSCSS/variables";
-/* PARA PANTALLAS CHICAS DE 300PX*/
-@media screen and (min-width:300px) {
-    *{
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-    }s
-    .contenido{
-        
-        width: 100%;
-        margin: auto;
-        display: grid;
-        grid-template-columns: auto auto auto auto;
-        grid-template-rows: auto auto;
-        grid-template-areas: 
-                    "parrafo parrafo slider slider"
-                    "mensaje mensaje mensaje mensaje ";
-    }
-    .container-slider{
-        grid-area: slider;
+@import "../archivoSCSS/mixin";
 
+/* PARA PANTALLAS CHICAS DE 320PX*/
+
+@media screen and (min-width:320px) {
+    *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
     }
-    .parrafo{
-        grid-area: parrafo;
+    
+    /*======================INDEX======================*/
+    .contenido{
         width: 100%;
-        margin: auto;
-    }
-    .mensaje{
-        grid-area: mensaje;
-        margin: auto;
-        width: 70%;
-    }
-    /*MENU*/
-    .resetas{
-        width: 100%;
+        height: auto;
+        margin: 0;
         display: grid;
         grid-template-columns: auto auto;
         grid-template-rows: auto auto auto;
-        grid-template-areas: 
-                    "uno dos"
-                    "tres cuatro"
-                    "cinco seis";
-        #uno{
-            grid-area: uno;
-            width:80%;
-            margin: 10px auto;
-        }
-        #dos{
-            grid-area: dos;
-            width:80%;
-            margin: 10px auto;
-        }
-        #tres{
-            grid-area: tres;
-            width:80%;
-            margin: 10px auto;
-        }
-        #cuatro{
-            grid-area: cuatro;
-            width:80%;
-            margin: 10px auto;
-        }
-        #cinco{
-            grid-area: cinco;
-            width:80%;
-            margin: 10px auto;
-        }
-        #seis{
-            grid-area: seis;
-            width:80%;
-            margin: 10px auto;
-        }
+        grid-template-areas: "parrafo parrafo"
+                    "slider slider"
+                   
+                    "mensaje mensaje";
 
-    }
-    .postre{
-        display: grid;
-        grid-template-columns: 50% 50%;
-        grid-template-rows: auto auto auto;
-        grid-template-areas: 
-                        "texto texto"
-                        "helados tartas"
-                        "crepas choco";
         
-        p:first-child{
-            text-align: center;
-            width: 50%;
-            grid-area: texto;
-            margin: 50px auto;
-            border-bottom: 5px double $azulC;
+        
+        .container-slider{
+            border: 5px solid $Negro;
+            padding: 0;
+            margin: 0;
+            background-color: $blanc;
+            width: 400px;
+            overflow: hidden;
 
+            grid-area: slider;
+            ul{
+                li{
+                    list-style: none;
+                }
+                
+            }
+            .slider{
+                display: flex;
+                animation: cambio 20s infinite alternate linear;
+                width: 400%;
+                li{
+                    width:100%;
+                    height: inherit;
+                    background-color: $blanc;
+                    margin: 30px;
+                    padding: 5px;
+        
+                    img{
+                        width: 90%;
+                        height: 200px;
+                        object-fit: cover;
+                        margin: auto;
+        
+                    }
+                    
+                }
+            }
+        
         }
-        .helados{
-            grid-area: helados;
-            width: 80%;
-            height: 70%;
-            margin: 10px auto;
-            p{
-                border: none;
+        
+
+        
+    }
+
+    .parrafo{
+        grid-area: parrafo;
+        h1{
+            animation-duration: 1s;
+            align-items: center;
+            border-top: 5px double map-get($map: $coloresPrincipales, $key:footer );
+            border-bottom:5px double map-get($map: $coloresPrincipales, $key:footer );
+            span{
+                    --total: calc(var(--duration)
+            + var(--delay));
+            position: relative;
+            display: block;
+            color: transparent;
+            overflow: hidden;
+            animation: revealText 1s
+            var(--total)forwards;
+            z-index: -10;
+            font-family: $font2;
+            font-weight: bold;
+            text-align: center;
+            
+            
+            span::after{
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                transform: scaleX(0);
+                transform-origin: left;
+                animation: rollIn var(--duration) var(--delay) forwards, rollOut var(--duration) var(--total) forwards;
             }
         }
-        .tartas{
-            grid-area: tartas;
-            width: 80%;
-            height: 70%;
-            margin: 10px auto;
-            p{
-                border: none;
+        
+        }
+        @keyframes revealText{
+            to{
+                color: rgb(10, 9, 9);
             }
         }
-        .crepas{
-            grid-area: crepas;
-            width: 80%;
-            height: 70%;
-            margin: 10px auto;
-            p{
-                border: none;
+        @keyframes rollIn{
+            from{
+                transform: scaleX(0);
+            }
+            to{
+                transform: scaleX(1);
             }
         }
-        .chocolates{
-            grid-area: choco;
-            width: 80%;
-            height: 70%;
-            margin: 10px auto;
+        @keyframes rollOut {
+            from{
+                transform: scaleX(0);
+            }
+            to{
+                transform: scaleX(100%);
+            }
+        }
+
+    }
+
+    .mensaje{
+        width: 100%;
+        height: 400px;
+        margin: 10px 0;
+
+        grid-area: mensaje;
+
+        background-image: linear-gradient(45deg, rgba(249, 244, 244,.6)30% , rgba(252, 254, 255,.8) ),url(../img/fondo3.jpeg);
+        background-repeat: no-repeat;
+        background-position: center;
+        object-fit: contain;
+        span{
+            display: block;
+            text-align: center;
+            font-family: $font1;
+            font-size: 1.6rem;
+        }
+
+        /*AL PARRAFO LE AGREGUE EL MIXIN y comente los valores ateriores*/
+        p{
+            @include texto (black,$font2);
+        }
+        /*
+        p{  
+            padding: auto;
+            margin: 40px;
+            font-family: $font2;
+            letter-spacing: 2px;
+        }*/
+
+        
+    }
+
+    /*======================MENU======================*/
+    .menu{
+        background-color: $colorf;
+        margin-top: 5px;
+        border: 1px solid map-get($map: $coloresPrincipales, $key:footer );
+        a{
+            text-align: center;
+            border-bottom: 2px double map-get($map: $coloresPrincipales, $key:footer );
+            i{
+                font-size: 4rem;
+                color: $Negro;
+            }
+        }
+        p{
+            font-size: 1.2rem;
+            font-family: $font2;
+            text-align: center;
+            font-weight: bold;
+        }
+    }
+    .carta{
+        width: 100%;
+        p{
+            text-align: center;
+            font-size: 1.4rem;
+            font-family: $font3;
+            span{
+                font-size: 1rem;
+                font-family: $font2;
+                
+            }
+        }
+        .resetas{
+            div{
+                
+                background-color: $colorf;
+                margin: 5px;
+                border: 1px solid map-get($map: $coloresPrincipales, $key:footer );
+                p:first-child{
+                    font-size: 1rem;
+                    font-family: $font2;
+                    font-weight: bold;
+                    span{
+                        font-size: 1.3rem;
+                        font-family: $font1;
+                    }
+                }
+                p:last-child{
+                    font-size: .8rem;
+                }
+            }
+        }
+       
+    } 
+    .postre{
+        width: 100%;
+        height: 550px;
+        background-image: linear-gradient(45deg, rgba(245, 236, 236,.1)30% , rgba(43, 175, 201, 0.1) ),url(../img/helado.webp);
+        background-repeat: no-repeat;
+        background-position: center;
+        object-fit: cover;
+        background-size: cover;
+        margin: 10px 0;
+        border-radius: 5px;
+        p{
+            text-align: center;
+            width: 60%;
+            margin: auto;
+            font-size: 1.8rem;
+            font-family: $font2;
+            border-bottom:5px double map-get($map: $coloresPrincipales, $key:footer ) ;
+        }
+
+        div{
+            width: 90%;
+            height: 110px;
+            margin:10px 5%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 10px;
+            background-color: $gris;
+            cursor: pointer;
             p{
-                border: none;
+                text-align: center;
+                font-size: 1.6rem;
+                letter-spacing: 7px;
+                font-family: $font3;
+                font-weight: bold;
+                
             }
         }
     }
-          
+
+    /*============NSOTROS===============*/
+    .nosotros{
+        width: 100%;
+        div{
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            p{
+                font-size: 1.8rem;
+                font-family: $font1;
+                font-weight: bold;
+                text-align: center;
+            }
+            div{
+                background-color: $colorf;
+                width: 100%;
+                height: 400px;
+                margin: 10px 0 10px 0;
+                img{
+                    width: 90%;
+                    height: 70%;
+                    object-fit: cover;
+                    margin: auto;
+                }
+                p{
+                    margin: 0;
+                    width: 100%;
+                    height: 20%;
+                    font-size: 1.2rem;
+                    font-family: $font3;
+                    font-weight: 500;
+                    span{
+                        display: block;
+                        font-size: 1rem;
+                        font-family: $font2;
+                        font-weight: 900;
+                    }
+                }
+            }
+        }
+    }
+    
+    /*============HORARIOS===============*/
+
+    .horarios{
+        margin: 10px 0;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+
+        h1{
+            text-align: center;
+            font-size: 1.3rem;
+            font-family: $font2;
+            background-color: $colorf;
+
+            p{
+                font-size: 1rem;
+                font-family: $font3;
+                font-weight: bold;
+            }
+            
+        }
+        div{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: $colorf;
+            padding: 10px;
+            
+            h2{
+                text-align: center;
+                font-size: 1.2rem;
+                font-family:cursive;
+            }
+            p{ 
+                text-align: center;
+                width:70%;
+                border-bottom: 3px double map-get($map: $coloresPrincipales, $key:footer );
+            }
+            button{
+                cursor: pointer;
+            }
+        }
+    }
+
+    /*============CONTACTO===============*/
+
     .contacto{
-        margin: 100px auto;
+        width: 100%;
+        border: 4px solid map-get($map: $coloresPrincipales, $key:footer );
+        margin: 10px 0px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: $colorf;
+        div{
+            width: 50%;
+            border-bottom: 3px double map-get($map: $coloresPrincipales, $key:footer );
+            p{
+                text-align: center;
+                
+            }
+        }
     }
+
+
+
+    /*============FACTURAS===============*/
+
     .facturas{
-        margin: 200px auto;
-        width: 90%;
+        background-color: $colorf;
+        width: 100%;
+        margin: 25px auto;
+        .row{
+            width: 90%;
+            border-bottom: 4px double map-get($map: $coloresPrincipales, $key:footer );
+            margin: 25px auto;
+            p:first-child{
+                font-weight: bold;
+            }
+            p{
+                text-align: center;
+                font-size: 1.1rem;
+                font-family: $font3;
+                margin-top: 5px;
+            }
+            form{
+                width: 90%;
+                text-align: center;
+                display: flex;
+                flex-direction: column;
+                overflow: hidden;
+                p{
+                    label{
+                        button{
+                            margin-top: 10px;
+                            text-align: center;
+                            margin-left: auto;
+                            margin-right: auto;
+                        }
+                    }
+                }
+            }
+        }
+
     }
+
+
+
+    /*============FOOTER===============*/
+
+    footer{
+        display: flex;
+        position:absolute;
+        align-items: center;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        width: 100%;
+        height: 250px;
+        background-color: map-get($map: $coloresPrincipales, $key:footer );
+        margin-bottom: 0;
+        padding-bottom: 0;
+        z-index: 100;
+
+
+        .parrU{
+            display: inline;
+            font-size: .8em;
+            font-family: $font1;
+            border-bottom: 5px double $blanc;
+            color: $blanc;
+            margin: 10px;
+        }
+
+        ul{
+            display: flex;
+            flex-direction: row;
+            column-gap: 25px;
+            li{
+                margin: 15px;
+                list-style: none;
+                a{
+                    text-decoration: none;
+                    width: 60px;
+                    height: 60px;
+                    display: inline-flex;
+                    align-items: center;
+                    justify-content: center;
+                    font-size: 26px;
+                    color: $blanc;
+                    border-radius: 50%;
+                    outline: 2px solid $blanc;
+                    transition-property: outline-offset, outline-color, background-color;
+                    transition-duration: .25s;
+
+                }
+                 
+                
+            } 
+            a:hover{
+                    outline-offset: 4px;
+                    i{
+                        animation: shake .25s;
+                    }
+                    
+                }
+               
+                .icoU a:hover{
+                    background-color: #0077b5;
+                    outline-color: #0077b5;
+                }
+                .icoD a:hover{
+                    background-color: #1da1f2;
+                    outline-color: #1da1f2;
+                }
+                .icoT a:hover{
+                    background-image: 
+                    radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%,#fd5949 45%, #d6249f 60%, #285aeb 90%);
+                    outline-color: #a02d76;
+                }
+        }
+
+        @keyframes shake {
+            10%{transform: rotate(15deg); }
+            20%{transform: rotate(-15deg); }
+            30%{transform: rotate(15deg); }
+            40%{transform: rotate(-15deg); }
+            
+        }
+
+        a{
+            text-decoration: none;
+            color: $blanc;
+        }
+        .parrD{
+            font-size: .9rem;
+        }
+
+    }
+  
 }
+
 @media screen and (min-width:1000px) {
     .contenido{
         width: 90%;
@@ -177,10 +540,14 @@
     }
     .contacto{
         width: 60%;
+        margin: 20px auto; 
     }
     .facturas{
         width: 50%;
         padding: 50px;
-        margin: 100px auto;
+        margin: ($margin + 95px) auto;
     }
 }
+
+
+

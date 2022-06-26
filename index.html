@@ -2,8 +2,12 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <!--KEYWORDS-->
+    <meta name="description" content="Restaurante de Marisqueria Costa caribe, cuenta con tacos, filetes de pescado y ceviches">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--ANIMACION-->
+    <link rel="stylesheet" href="css/animate.css">
     <!--BOOTSTRAP-->
     <link rel="stylesheet" href="Bootstrap/bootstrap.min.css">
     <!--STYLESCSS-->
@@ -17,7 +21,7 @@
     <title>COSTA CARIBE | INICIO</title>
 </head>
 <body>
-    <div class="container-fluid">
+    <div class="wow animate__zoomOutUp container-fluid">
         <header>
         <nav class="navbar navbar-expand-lg ">
             <div class="container-fluid">
@@ -70,8 +74,8 @@
         </h1>
       </div>
 
-      <div class=" container-fluid mensaje">
-        <p> <span>La salud  es lo más preciado</span>
+      <div class="  container-fluid mensaje">
+        <p> <span class="wow animate__rubberBand " >La salud  es lo más preciado</span>
           Si bien es importante tener grasas naturales en su dieta, muchos alimentos contienen grasas añadidos dañinos que no contienen ningún valor nutricional. 
           
           Según un estudio realizado por la Universidad de Florida, el cerebro libera sustancias químicas similares a la heroína llamadas opioides endógenos cuando una persona se entrega a alimentos grasosos, salados o dulces.</p>
@@ -109,5 +113,8 @@
     <script src="bootstrap/bootstrap.bundle.min.js"></script>
     <!--PARA LOS ICONOS-->
     <script src="https://kit.fontawesome.com/979475b1c3.js" crossorigin="anonymous"></script>
+    <!--PARA LAS ANIMACIONES-->
+    <script src="js/wow.min.js"></script>
+    <script>new WOW().init();</script>
 </body>
 </html>

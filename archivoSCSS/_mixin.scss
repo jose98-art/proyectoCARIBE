@@ -1,0 +1,7 @@
+@mixin texto ($color, $fuente) {
+    padding: auto;
+    margin: 40px;
+    font-family: $fuente;
+    letter-spacing: 2px;
+    color: $color;
+}

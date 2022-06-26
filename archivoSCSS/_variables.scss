@@ -1,12 +1,38 @@
 $font1:'Fascinate Inline', cursive;
 $font2:"Rubik Puddles", cursive;
 $font3: 'Courier New', Courier, monospace;
-$azulC:#4ae7ff;
+/*
+$azulC:#4ae7ff; se reemplaso este variable en el mapa 
+*/
 $azulF:#0f206c;
 $blanc:white;
 $Negro:black;
-$azulcl:rgba(76, 182, 198,.2);
+/*
+$azulcl:rgba(76, 182, 198,.2); se reemplaso este variable en el mapa 
+*/
 $gris:rgba(242,242,242,.4);
 $colorf:rgb(242,242,242);
+
+
+/*VARIABLES PARA LAS OPERACIONES*/
 $size:1em;
 $ancho:1000px;
+$margin:5px;
+
+
+/*MAPAS:  este mapa se lo aplique al nav y al footer */
+$coloresPrincipales:(header:rgba(76, 182, 198,.2) ,footer:#4ae7ff  );
+
+
+
+
+/*TEMAS A INCLUIR PARA LA ENTREGA --MAPA CON MAP-GET, MIXIN Y REUTILIZAR EL CODIGO, EXTEND MODIFICANDO UNA O MAS CLACES, MODIFICACIONES NESESARIAS PARA MEJORAR EL SEO,*/
+
+/*MAPA -MAP-GET  √  */
+/*MIIXN - REUTILIZANDO CODIGO  √ */ 
+/*EXTEND MODIFICANDO UNO O MAS CLACES  */
+/*SEO  */
+
+/*INSERTAR LOS KEYWORDS, DESCRIPCION, TITULOS Y ENCABEZADO A TODAS LAS PAGINAS*/
+
+/*EXPLICAR LOS CAMBIOS REALIZADOS E INCLUIR EL LINK DEL REPOSITORIO*/
