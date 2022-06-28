@@ -211,6 +211,9 @@
                 p:last-child{
                     font-size: .8rem;
                 }
+                div{
+                    display: none;
+                }
             }
         }
        
@@ -357,7 +360,9 @@
             border-bottom: 3px double map-get($map: $coloresPrincipales, $key:footer );
             p{
                 text-align: center;
-                
+                a{
+                    color: $Negro;
+                }
             }
         }
     }
@@ -499,6 +504,8 @@
   
 }
 
+
+/*=============PARA PANTALLAS A MAS DE 1000PX==========*/
 @media screen and (min-width:1000px) {
     .contenido{
         width: 90%;
@@ -546,6 +553,64 @@
         width: 50%;
         padding: 50px;
         margin: ($margin + 95px) auto;
+    }
+
+    /*-------------MENU-------------*/
+    .resetas{
+        height: $largo + 800px;
+        border: 1px solid black;
+        display: grid;
+        row-gap: none;
+        grid-template-columns: 50% 50%;
+        grid-template-rows: 33% 33% 33%;
+        grid-template-areas: 
+        "uno  dos"
+        "tres  cuatro"
+        "cinco  seis";
+       
+        #uno{
+            grid-area: uno;
+        }
+        #dos{
+            grid-area:dos;
+        }
+        #tres{
+            grid-area:tres;
+        }
+        #cuatro{
+            grid-area:cuatro;
+        }
+        #cinco{
+            grid-area:cinco;
+        }
+        #seis{
+            grid-area:seis;
+        }
+
+       div{
+           @include tamañoDeDivMenu(auto,  20%);
+       }
+    }
+
+    .resetas{
+        div{
+            height: $largo2 - 5%;
+            margin: 10px;
+            overflow: hidden;
+            box-shadow: 6px 0px 16px rgba(0,0,0,.3);
+            div{
+                
+                border: 1px solid black;
+                width: $ancho2 ;
+                height: $largo2 - 30%;
+                margin: auto;
+                img{
+                    object-fit: cover;
+                    width: $ancho2;
+                    height: $largo2;
+                }
+            }
+        }
     }
 }
 

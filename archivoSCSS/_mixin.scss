@@ -7,3 +7,13 @@
     letter-spacing: 2px;
     color: $color;
 }
+
+@mixin tamañoDeDivMenu ($top , $MasH){
+    width: ($ancho2 - $MasH) ;
+    height: $largo2 ;
+    margin: $top auto;
+    display: flex;
+    flex-direction: column;
+    justify-content:left ;
+    justify-self: center;
+}
