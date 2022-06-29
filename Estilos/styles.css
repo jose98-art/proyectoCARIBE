@@ -687,59 +687,20 @@ $azulcl:rgba(76, 182, 198,.2); se reemplaso este variable en el mapa
   }
   /*-------------MENU-------------*/
   .resetas {
-    border: 1px solid black;
-    display: -ms-grid;
-    display: grid;
-    -ms-grid-columns: 50% 50%;
-        grid-template-columns: 50% 50%;
-    -ms-grid-rows: auto auto auto;
-        grid-template-rows: auto auto auto;
-        grid-template-areas: "uno  dos" "tres  cuatro" "cinco  seis";
-  }
-  .resetas #uno {
-    -ms-grid-row: 1;
-    -ms-grid-column: 1;
-    grid-area: uno;
-  }
-  .resetas #dos {
-    -ms-grid-row: 1;
-    -ms-grid-column: 2;
-    grid-area: dos;
-  }
-  .resetas #tres {
-    -ms-grid-row: 2;
-    -ms-grid-column: 1;
-    grid-area: tres;
-  }
-  .resetas #cuatro {
-    -ms-grid-row: 2;
-    -ms-grid-column: 2;
-    grid-area: cuatro;
-  }
-  .resetas #cinco {
-    -ms-grid-row: 3;
-    -ms-grid-column: 1;
-    grid-area: cinco;
-  }
-  .resetas #seis {
-    -ms-grid-row: 3;
-    -ms-grid-column: 2;
-    grid-area: seis;
-  }
-  .resetas div {
-    width: 90%;
-    margin: auto auto;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    -webkit-box-pack: left;
-        -ms-flex-pack: left;
-            justify-content: left;
-    justify-self: center;
+  }
+  .resetas div {
+    width: 60%;
+    height: 100%;
     overflow: hidden;
     -webkit-box-shadow: 6px 0px 16px rgba(0, 0, 0, 0.3);
             box-shadow: 6px 0px 16px rgba(0, 0, 0, 0.3);
