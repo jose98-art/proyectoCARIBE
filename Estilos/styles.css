@@ -231,9 +231,23 @@ $azulcl:rgba(76, 182, 198,.2); se reemplaso este variable en el mapa
     font-size: 1rem;
     font-family: "Rubik Puddles", cursive;
   }
+  .carta .resetas {
+    height: 2500px;
+  }
   .carta .resetas div {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    height: 400px;
+    margin: 10px;
+    overflow: hidden;
+    -webkit-box-shadow: 6px 0px 16px rgba(0, 0, 0, 0.3);
+            box-shadow: 6px 0px 16px rgba(0, 0, 0, 0.3);
     background-color: #f2f2f2;
-    margin: 5px;
     border: 0.9px solid #4ae7ff;
   }
   .carta .resetas div p:first-child {
@@ -247,9 +261,24 @@ $azulcl:rgba(76, 182, 198,.2); se reemplaso este variable en el mapa
   .carta .resetas div p:last-child {
     font-size: .8rem;
   }
-  .postre {
+  .carta .resetas div div {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-item-align: center;
+        align-self: center;
+    width: 90%;
+    height: 70%;
+  }
+  .carta .resetas div div img {
+    -o-object-fit: cover;
+       object-fit: cover;
     width: 100%;
-    height: 550px;
+    height: 100%;
+  }
+  .postre {
+    height: 1500px;
+    width: 100%;
     background-image: linear-gradient(45deg, rgba(147, 130, 130, 0.702) 30%, rgba(43, 175, 201, 0.1)), url(../img/helado.webp);
     background-repeat: no-repeat;
     background-position: center;
@@ -269,11 +298,15 @@ $azulcl:rgba(76, 182, 198,.2); se reemplaso este variable en el mapa
   }
   .postre div {
     width: 90%;
-    height: 110px;
+    height: 350px;
     margin: 10px 5%;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
@@ -292,7 +325,17 @@ $azulcl:rgba(76, 182, 198,.2); se reemplaso este variable en el mapa
     font-weight: bold;
   }
   .postre div div {
-    background: none;
+    width: 100%;
+    height: 300px;
+    margin: 5px;
+    margin-bottom: 0;
+  }
+  .postre div div img {
+    -o-object-fit: cover;
+       object-fit: cover;
+    width: 60%;
+    height: 60%;
+    border-radius: 20px;
   }
   /*============NSOTROS===============*/
   .nosotros {
@@ -644,14 +687,13 @@ $azulcl:rgba(76, 182, 198,.2); se reemplaso este variable en el mapa
   }
   /*-------------MENU-------------*/
   .resetas {
-    height: 1800px;
+    border: 1px solid black;
     display: -ms-grid;
     display: grid;
-    row-gap: none;
     -ms-grid-columns: 50% 50%;
         grid-template-columns: 50% 50%;
-    -ms-grid-rows: 33% 33% 33%;
-        grid-template-rows: 33% 33% 33%;
+    -ms-grid-rows: auto auto auto;
+        grid-template-rows: auto auto auto;
         grid-template-areas: "uno  dos" "tres  cuatro" "cinco  seis";
   }
   .resetas #uno {
@@ -685,8 +727,7 @@ $azulcl:rgba(76, 182, 198,.2); se reemplaso este variable en el mapa
     grid-area: seis;
   }
   .resetas div {
-    width: 80%;
-    height: 100%;
+    width: 90%;
     margin: auto auto;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -699,10 +740,6 @@ $azulcl:rgba(76, 182, 198,.2); se reemplaso este variable en el mapa
         -ms-flex-pack: left;
             justify-content: left;
     justify-self: center;
-  }
-  .resetas div {
-    height: 95%;
-    margin: 10px;
     overflow: hidden;
     -webkit-box-shadow: 6px 0px 16px rgba(0, 0, 0, 0.3);
             box-shadow: 6px 0px 16px rgba(0, 0, 0, 0.3);

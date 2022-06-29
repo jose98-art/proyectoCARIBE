@@ -10,7 +10,6 @@
 
 @mixin tamañoDeDivMenu ($top , $MasH){
     width: ($ancho2 - $MasH) ;
-    height: $largo2 ;
     margin: $top auto;
     display: flex;
     flex-direction: column;
