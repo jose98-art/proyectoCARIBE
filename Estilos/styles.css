@@ -1,4 +1,3 @@
-@charset "UTF-8";
 /*
 $azulC:#4ae7ff; se reemplaso este variable en el mapa 
 */
@@ -7,10 +6,6 @@ $azulcl:rgba(76, 182, 198,.2); se reemplaso este variable en el mapa
 */
 /*VARIABLES PARA LAS OPERACIONES*/
 /*MAPAS:  este mapa se lo aplique al nav y al footer */
-/*MAPA -MAP-GET  √  */
-/*MIIXN - REUTILIZANDO CODIGO  √ */
-/*EXTEND MODIFICANDO UNO O MAS CLACES √ */
-/*SEO √ */
 /*EXPLICAR LOS CAMBIOS REALIZADOS E INCLUIR EL LINK DEL REPOSITORIO*/
 /*
 $azulC:#4ae7ff; se reemplaso este variable en el mapa 
@@ -20,10 +15,6 @@ $azulcl:rgba(76, 182, 198,.2); se reemplaso este variable en el mapa
 */
 /*VARIABLES PARA LAS OPERACIONES*/
 /*MAPAS:  este mapa se lo aplique al nav y al footer */
-/*MAPA -MAP-GET  √  */
-/*MIIXN - REUTILIZANDO CODIGO  √ */
-/*EXTEND MODIFICANDO UNO O MAS CLACES √ */
-/*SEO √ */
 /*EXPLICAR LOS CAMBIOS REALIZADOS E INCLUIR EL LINK DEL REPOSITORIO*/
 /*ESTE MIXIN LO UTILICE PARA LOS ESTILOS DE LA ETIQUETA P CON LA CLECE MENSAJE */
 /* PARA PANTALLAS CHICAS DE 320PX*/
@@ -243,7 +234,7 @@ $azulcl:rgba(76, 182, 198,.2); se reemplaso este variable en el mapa
   .carta .resetas div {
     background-color: #f2f2f2;
     margin: 5px;
-    border: 1px solid #4ae7ff;
+    border: 0.9px solid #4ae7ff;
   }
   .carta .resetas div p:first-child {
     font-size: 1rem;
@@ -256,13 +247,10 @@ $azulcl:rgba(76, 182, 198,.2); se reemplaso este variable en el mapa
   .carta .resetas div p:last-child {
     font-size: .8rem;
   }
-  .carta .resetas div div {
-    display: none;
-  }
   .postre {
     width: 100%;
     height: 550px;
-    background-image: linear-gradient(45deg, rgba(245, 236, 236, 0.1) 30%, rgba(43, 175, 201, 0.1)), url(../img/helado.webp);
+    background-image: linear-gradient(45deg, rgba(147, 130, 130, 0.702) 30%, rgba(43, 175, 201, 0.1)), url(../img/helado.webp);
     background-repeat: no-repeat;
     background-position: center;
     -o-object-fit: cover;
@@ -302,6 +290,9 @@ $azulcl:rgba(76, 182, 198,.2); se reemplaso este variable en el mapa
     letter-spacing: 7px;
     font-family: "Courier New", Courier, monospace;
     font-weight: bold;
+  }
+  .postre div div {
+    background: none;
   }
   /*============NSOTROS===============*/
   .nosotros {
@@ -654,7 +645,6 @@ $azulcl:rgba(76, 182, 198,.2); se reemplaso este variable en el mapa
   /*-------------MENU-------------*/
   .resetas {
     height: 1800px;
-    border: 1px solid black;
     display: -ms-grid;
     display: grid;
     row-gap: none;
@@ -718,16 +708,138 @@ $azulcl:rgba(76, 182, 198,.2); se reemplaso este variable en el mapa
             box-shadow: 6px 0px 16px rgba(0, 0, 0, 0.3);
   }
   .resetas div div {
-    border: 1px solid black;
-    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-item-align: center;
+        align-self: center;
+    width: 90%;
     height: 70%;
-    margin: auto;
   }
   .resetas div div img {
     -o-object-fit: cover;
        object-fit: cover;
     width: 100%;
     height: 100%;
+  }
+  .postre {
+    height: 1500px;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: auto;
+        grid-template-columns: auto;
+    -ms-grid-rows: auto auto auto auto auto;
+        grid-template-rows: auto auto auto auto auto;
+        grid-template-areas: "tituloPostre" " helados" "tartas" "crepas" "chocolates";
+    /* MODIFICANDO LOS CONTENEDORES DE LA CALSE POSTRE*/
+  }
+  .postre .tituloPos {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    grid-area: tituloPostre;
+  }
+  .postre .helados {
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+    grid-area: helados;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 50% 50%;
+        grid-template-columns: 50% 50%;
+    -ms-grid-rows: auto;
+        grid-template-rows: auto;
+        grid-template-areas: "img tex";
+  }
+  .postre .helados p {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    grid-area: tex;
+  }
+  .postre .helados div {
+    -ms-grid-row: 1;
+    -ms-grid-column: 2;
+    grid-area: img;
+  }
+  .postre .tartas {
+    -ms-grid-row: 3;
+    -ms-grid-column: 1;
+    grid-area: tartas;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 50% 50%;
+        grid-template-columns: 50% 50%;
+    -ms-grid-rows: auto;
+        grid-template-rows: auto;
+        grid-template-areas: "tex img ";
+  }
+  .postre .tartas p {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    grid-area: tex;
+  }
+  .postre .tartas div {
+    -ms-grid-row: 1;
+    -ms-grid-column: 2;
+    grid-area: img;
+  }
+  .postre .crepas {
+    -ms-grid-row: 4;
+    -ms-grid-column: 1;
+    grid-area: crepas;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 50% 50%;
+        grid-template-columns: 50% 50%;
+    -ms-grid-rows: auto;
+        grid-template-rows: auto;
+        grid-template-areas: "img tex";
+  }
+  .postre .crepas p {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    grid-area: tex;
+  }
+  .postre .crepas div {
+    -ms-grid-row: 1;
+    -ms-grid-column: 2;
+    grid-area: img;
+  }
+  .postre .chocolates {
+    -ms-grid-row: 5;
+    -ms-grid-column: 1;
+    grid-area: chocolates;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 50% 50%;
+        grid-template-columns: 50% 50%;
+    -ms-grid-rows: auto;
+        grid-template-rows: auto;
+        grid-template-areas: "tex img ";
+  }
+  .postre .chocolates p {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    grid-area: tex;
+  }
+  .postre .chocolates div {
+    -ms-grid-row: 1;
+    -ms-grid-column: 2;
+    grid-area: img;
+  }
+  .postre div {
+    margin-top: 15px;
+    height: 300px;
+  }
+  .postre div div {
+    height: 300px;
+    margin: 5px;
+  }
+  .postre div div img {
+    -o-object-fit: cover;
+       object-fit: cover;
+    width: 90%;
+    height: 90%;
+    border-radius: 20px;
   }
 }
 
@@ -741,10 +853,6 @@ $azulcl:rgba(76, 182, 198,.2); se reemplaso este variable en el mapa
 */
 /*VARIABLES PARA LAS OPERACIONES*/
 /*MAPAS:  este mapa se lo aplique al nav y al footer */
-/*MAPA -MAP-GET  √  */
-/*MIIXN - REUTILIZANDO CODIGO  √ */
-/*EXTEND MODIFICANDO UNO O MAS CLACES √ */
-/*SEO √ */
 /*EXPLICAR LOS CAMBIOS REALIZADOS E INCLUIR EL LINK DEL REPOSITORIO*/
 .textos, .parrafo, .resetas p:first-child, .menu p {
   font-family: "Rubik Puddles", cursive;

@@ -199,7 +199,7 @@
                 
                 background-color: $colorf;
                 margin: 5px;
-                border: 1px solid map-get($map: $coloresPrincipales, $key:footer );
+                border: .90px solid map-get($map: $coloresPrincipales, $key:footer );
                 p:first-child{
                     font-size: 1rem;
                     font-weight: bold;
@@ -211,9 +211,7 @@
                 p:last-child{
                     font-size: .8rem;
                 }
-                div{
-                    display: none;
-                }
+                
             }
         }
        
@@ -221,7 +219,7 @@
     .postre{
         width: 100%;
         height: 550px;
-        background-image: linear-gradient(45deg, rgba(245, 236, 236,.1)30% , rgba(43, 175, 201, 0.1) ),url(../img/helado.webp);
+        background-image: linear-gradient(45deg, rgba(147, 130, 130, 0.702)30% , rgba(43, 175, 201, 0.1) ),url(../img/helado.webp);
         background-repeat: no-repeat;
         background-position: center;
         object-fit: cover;
@@ -254,6 +252,9 @@
                 font-family: $font3;
                 font-weight: bold;
                 
+            }
+            div{
+                background: none;
             }
         }
     }
@@ -558,7 +559,6 @@
     /*-------------MENU-------------*/
     .resetas{
         height: $largo + 800px;
-        border: 1px solid black;
         display: grid;
         row-gap: none;
         grid-template-columns: 50% 50%;
@@ -599,15 +599,93 @@
             overflow: hidden;
             box-shadow: 6px 0px 16px rgba(0,0,0,.3);
             div{
-                
-                border: 1px solid black;
-                width: $ancho2 ;
+                display: flex;
+                align-self: center;
+                width: $ancho2 -  10% ;
                 height: $largo2 - 30%;
-                margin: auto;
                 img{
                     object-fit: cover;
                     width: $ancho2;
                     height: $largo2;
+                }
+            }
+        }
+    }
+
+    .postre{
+        height: $largo + 500px;
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-rows: auto auto auto auto auto;
+        grid-template-areas: 
+        "tituloPostre"
+        " helados"
+        "tartas"
+        "crepas"
+        "chocolates";
+        
+       
+        .tituloPos{
+            grid-area:tituloPostre;
+        }
+        .helados {
+            grid-area:helados;
+            @include posisionPostre;
+            grid-template-areas: "img tex";
+            p{
+                grid-area: tex;
+            }
+            div{
+                grid-area: img;
+            }
+        }
+        .tartas {
+            grid-area: tartas;
+             @include posisionPostre;
+            grid-template-areas: "tex img ";
+            p{
+                grid-area: tex;
+            }
+            div{
+                grid-area: img;
+            }
+        }
+        .crepas {
+            grid-area: crepas;
+             @include posisionPostre;
+            grid-template-areas: "img tex";
+            p{
+                grid-area: tex;
+            }
+            div{
+                grid-area: img;
+            }
+        }
+        .chocolates {
+            grid-area: chocolates;
+             @include posisionPostre;
+            grid-template-areas: "tex img ";
+            p{
+                grid-area: tex;
+            }
+            div{
+                grid-area: img;
+            }
+        }
+        /* MODIFICANDO LOS CONTENEDORES DE LA CALSE POSTRE*/
+        div{
+            margin-top: $margin + 10px;
+            height: $largo - 700px;
+            
+            div{
+                height: $largo - 700px;
+                margin: $margin ;
+                img{
+                    object-fit: cover;
+                    width: $ancho2 - 10%;
+                    height: $largo2 - 10%;
+                    border-radius:20px ;
+
                 }
             }
         }
