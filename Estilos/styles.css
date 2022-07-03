@@ -20,22 +20,24 @@ $azulcl:rgba(76, 182, 198,.2); se reemplaso este variable en el mapa
   * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
   }
-
   /*======================INDEX======================*/
   .navbar-expand-lg {
     z-index: 100;
   }
-
   .contenido {
     width: 100%;
     height: auto;
     margin: 0;
+    display: -ms-grid;
     display: grid;
-    grid-template-columns: auto auto;
-    grid-template-rows: auto auto auto;
-    grid-template-areas: "parrafo parrafo" "slider slider" "mensaje mensaje";
+    -ms-grid-columns: auto auto;
+        grid-template-columns: auto auto;
+    -ms-grid-rows: auto auto auto;
+        grid-template-rows: auto auto auto;
+        grid-template-areas: "parrafo parrafo" "slider slider"  "mensaje mensaje";
   }
   .contenido .container-slider {
     border: 5px solid black;
@@ -44,12 +46,17 @@ $azulcl:rgba(76, 182, 198,.2); se reemplaso este variable en el mapa
     background-color: white;
     width: 400px;
     overflow: hidden;
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 2;
     grid-area: slider;
   }
   .contenido .container-slider ul li {
     list-style: none;
   }
   .contenido .container-slider .slider {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     -webkit-animation: cambio 20s infinite alternate linear;
             animation: cambio 20s infinite alternate linear;
@@ -69,20 +76,24 @@ $azulcl:rgba(76, 182, 198,.2); se reemplaso este variable en el mapa
        object-fit: cover;
     margin: auto;
   }
-
   .parrafo {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 2;
     grid-area: parrafo;
   }
   .parrafo h1 {
     -webkit-animation-duration: 1s;
             animation-duration: 1s;
-    align-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     border-top: 5px double #4ae7ff;
     border-bottom: 5px double #4ae7ff;
   }
   .parrafo h1 span {
     --total: calc(var(--duration)
-    + var(--delay));
+            + var(--delay));
     position: relative;
     display: block;
     color: transparent;
@@ -93,64 +104,76 @@ $azulcl:rgba(76, 182, 198,.2); se reemplaso este variable en el mapa
     font-weight: bold;
   }
   .parrafo h1 span span::after {
-    content: "";
+    content: '';
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    transform: scaleX(0);
-    transform-origin: left;
+    -webkit-transform: scaleX(0);
+            transform: scaleX(0);
+    -webkit-transform-origin: left;
+            transform-origin: left;
     -webkit-animation: rollIn var(--duration) var(--delay) forwards, rollOut var(--duration) var(--total) forwards;
             animation: rollIn var(--duration) var(--delay) forwards, rollOut var(--duration) var(--total) forwards;
   }
   @-webkit-keyframes revealText {
     to {
-      color: rgb(10, 9, 9);
+      color: #0a0909;
     }
   }
   @keyframes revealText {
     to {
-      color: rgb(10, 9, 9);
+      color: #0a0909;
     }
   }
   @-webkit-keyframes rollIn {
     from {
-      transform: scaleX(0);
+      -webkit-transform: scaleX(0);
+              transform: scaleX(0);
     }
     to {
-      transform: scaleX(1);
+      -webkit-transform: scaleX(1);
+              transform: scaleX(1);
     }
   }
   @keyframes rollIn {
     from {
-      transform: scaleX(0);
+      -webkit-transform: scaleX(0);
+              transform: scaleX(0);
     }
     to {
-      transform: scaleX(1);
+      -webkit-transform: scaleX(1);
+              transform: scaleX(1);
     }
   }
   @-webkit-keyframes rollOut {
     from {
-      transform: scaleX(0);
+      -webkit-transform: scaleX(0);
+              transform: scaleX(0);
     }
     to {
-      transform: scaleX(100%);
+      -webkit-transform: scaleX(100%);
+              transform: scaleX(100%);
     }
   }
   @keyframes rollOut {
     from {
-      transform: scaleX(0);
+      -webkit-transform: scaleX(0);
+              transform: scaleX(0);
     }
     to {
-      transform: scaleX(100%);
+      -webkit-transform: scaleX(100%);
+              transform: scaleX(100%);
     }
   }
-
   .mensaje {
     width: 100%;
     height: 400px;
     margin: 10px 0;
+    -ms-grid-row: 3;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 2;
     grid-area: mensaje;
     background-image: linear-gradient(45deg, rgba(249, 244, 244, 0.6) 30%, rgba(252, 254, 255, 0.8)), url(../img/fondo3.jpeg);
     background-repeat: no-repeat;
@@ -172,10 +195,9 @@ $azulcl:rgba(76, 182, 198,.2); se reemplaso este variable en el mapa
     letter-spacing: 2px;
     color: black;
   }
-
   /*======================MENU======================*/
   .menu {
-    background-color: rgb(242, 242, 242);
+    background-color: #f2f2f2;
     margin-top: 5px;
     border: 1px solid #4ae7ff;
   }
@@ -191,7 +213,6 @@ $azulcl:rgba(76, 182, 198,.2); se reemplaso este variable en el mapa
     font-size: 1.2rem;
     font-weight: bold;
   }
-
   .carta {
     width: 100%;
   }
@@ -208,13 +229,19 @@ $azulcl:rgba(76, 182, 198,.2); se reemplaso este variable en el mapa
     height: 2500px;
   }
   .carta .resetas div {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     height: 400px;
     margin: 10px;
     overflow: hidden;
-    box-shadow: 6px 0px 16px rgba(0, 0, 0, 0.3);
-    background-color: rgb(242, 242, 242);
+    -webkit-box-shadow: 6px 0px 16px rgba(0, 0, 0, 0.3);
+            box-shadow: 6px 0px 16px rgba(0, 0, 0, 0.3);
+    background-color: #f2f2f2;
     border: 0.9px solid #4ae7ff;
   }
   .carta .resetas div p:first-child {
@@ -226,11 +253,14 @@ $azulcl:rgba(76, 182, 198,.2); se reemplaso este variable en el mapa
     font-family: "Fascinate Inline", cursive;
   }
   .carta .resetas div p:last-child {
-    font-size: 0.8rem;
+    font-size: .8rem;
   }
   .carta .resetas div div {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-self: center;
+    -ms-flex-item-align: center;
+        align-self: center;
     width: 90%;
     height: 70%;
   }
@@ -240,7 +270,6 @@ $azulcl:rgba(76, 182, 198,.2); se reemplaso este variable en el mapa
     width: 100%;
     height: 100%;
   }
-
   .postre {
     height: 1500px;
     width: 100%;
@@ -265,10 +294,19 @@ $azulcl:rgba(76, 182, 198,.2); se reemplaso este variable en el mapa
     width: 90%;
     height: 350px;
     margin: 10px 5%;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     border-radius: 10px;
     background-color: rgba(242, 242, 242, 0.4);
     cursor: pointer;
@@ -293,15 +331,19 @@ $azulcl:rgba(76, 182, 198,.2); se reemplaso este variable en el mapa
     height: 60%;
     border-radius: 20px;
   }
-
   /*============NSOTROS===============*/
   .nosotros {
     width: 100%;
   }
   .nosotros div {
     width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
   .nosotros div p {
     font-size: 1.8rem;
@@ -310,7 +352,7 @@ $azulcl:rgba(76, 182, 198,.2); se reemplaso este variable en el mapa
     text-align: center;
   }
   .nosotros div div {
-    background-color: rgb(242, 242, 242);
+    background-color: #f2f2f2;
     width: 100%;
     height: 400px;
     margin: 10px 0 10px 0;
@@ -336,19 +378,23 @@ $azulcl:rgba(76, 182, 198,.2); se reemplaso este variable en el mapa
     font-family: "Rubik Puddles", cursive;
     font-weight: 900;
   }
-
   /*============HORARIOS===============*/
   .horarios {
     margin: 10px 0;
     width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
   .horarios h1 {
     text-align: center;
     font-size: 1.3rem;
     font-family: "Rubik Puddles", cursive;
-    background-color: rgb(242, 242, 242);
+    background-color: #f2f2f2;
   }
   .horarios h1 p {
     font-size: 1rem;
@@ -356,10 +402,17 @@ $azulcl:rgba(76, 182, 198,.2); se reemplaso este variable en el mapa
     font-weight: bold;
   }
   .horarios div {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: rgb(242, 242, 242);
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    background-color: #f2f2f2;
     padding: 10px;
   }
   .horarios div h2 {
@@ -375,17 +428,25 @@ $azulcl:rgba(76, 182, 198,.2); se reemplaso este variable en el mapa
   .horarios div button {
     cursor: pointer;
   }
-
   /*============CONTACTO===============*/
   .contacto {
     width: 100%;
     border: 4px solid #4ae7ff;
     margin: 10px 0px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background-color: rgb(242, 242, 242);
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    background-color: #f2f2f2;
   }
   .contacto div {
     width: 50%;
@@ -397,10 +458,9 @@ $azulcl:rgba(76, 182, 198,.2); se reemplaso este variable en el mapa
   .contacto div p a {
     color: black;
   }
-
   /*============FACTURAS===============*/
   .facturas {
-    background-color: rgb(242, 242, 242);
+    background-color: #f2f2f2;
     width: 100%;
     margin: 25px auto;
   }
@@ -421,8 +481,13 @@ $azulcl:rgba(76, 182, 198,.2); se reemplaso este variable en el mapa
   .facturas .row form {
     width: 90%;
     text-align: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     overflow: hidden;
   }
   .facturas .row form p label button {
@@ -431,14 +496,19 @@ $azulcl:rgba(76, 182, 198,.2); se reemplaso este variable en el mapa
     margin-left: auto;
     margin-right: auto;
   }
-
   /*============FOOTER===============*/
   footer {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     position: absolute;
-    align-items: center;
-    justify-content: space-around;
-    flex-wrap: wrap;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
     width: 100%;
     height: 250px;
     background-color: #4ae7ff;
@@ -448,17 +518,22 @@ $azulcl:rgba(76, 182, 198,.2); se reemplaso este variable en el mapa
   }
   footer .parrU {
     display: inline;
-    font-size: 0.8em;
+    font-size: .8em;
     font-family: "Fascinate Inline", cursive;
     border-bottom: 5px double white;
     color: white;
     margin: 10px;
   }
   footer ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: row;
-    -moz-column-gap: 25px;
-         column-gap: 25px;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-column-gap: 25px;
+            column-gap: 25px;
   }
   footer ul li {
     margin: 15px;
@@ -468,22 +543,30 @@ $azulcl:rgba(76, 182, 198,.2); se reemplaso este variable en el mapa
     text-decoration: none;
     width: 60px;
     height: 60px;
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
     display: inline-flex;
-    align-items: center;
-    justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     font-size: 26px;
     color: white;
     border-radius: 50%;
     outline: 2px solid white;
+    -webkit-transition-property: outline-offset, outline-color, background-color;
     transition-property: outline-offset, outline-color, background-color;
-    transition-duration: 0.25s;
+    -webkit-transition-duration: .25s;
+            transition-duration: .25s;
   }
   footer ul a:hover {
     outline-offset: 4px;
   }
   footer ul a:hover i {
-    -webkit-animation: shake 0.25s;
-            animation: shake 0.25s;
+    -webkit-animation: shake .25s;
+            animation: shake .25s;
   }
   footer ul .icoU a:hover {
     background-color: #0077b5;
@@ -499,30 +582,38 @@ $azulcl:rgba(76, 182, 198,.2); se reemplaso este variable en el mapa
   }
   @-webkit-keyframes shake {
     10% {
-      transform: rotate(15deg);
+      -webkit-transform: rotate(15deg);
+              transform: rotate(15deg);
     }
     20% {
-      transform: rotate(-15deg);
+      -webkit-transform: rotate(-15deg);
+              transform: rotate(-15deg);
     }
     30% {
-      transform: rotate(15deg);
+      -webkit-transform: rotate(15deg);
+              transform: rotate(15deg);
     }
     40% {
-      transform: rotate(-15deg);
+      -webkit-transform: rotate(-15deg);
+              transform: rotate(-15deg);
     }
   }
   @keyframes shake {
     10% {
-      transform: rotate(15deg);
+      -webkit-transform: rotate(15deg);
+              transform: rotate(15deg);
     }
     20% {
-      transform: rotate(-15deg);
+      -webkit-transform: rotate(-15deg);
+              transform: rotate(-15deg);
     }
     30% {
-      transform: rotate(15deg);
+      -webkit-transform: rotate(15deg);
+              transform: rotate(15deg);
     }
     40% {
-      transform: rotate(-15deg);
+      -webkit-transform: rotate(-15deg);
+              transform: rotate(-15deg);
     }
   }
   footer a {
@@ -530,40 +621,47 @@ $azulcl:rgba(76, 182, 198,.2); se reemplaso este variable en el mapa
     color: white;
   }
   footer .parrD {
-    font-size: 0.9rem;
+    font-size: .9rem;
   }
 }
+
 /*=============PARA PANTALLAS A MAS DE 1000PX==========*/
 @media screen and (min-width: 1000px) {
   .contenido {
     width: 90%;
     margin: auto;
-    background-color: rgb(242, 242, 242);
+    background-color: #f2f2f2;
+    display: -ms-grid;
     display: grid;
-    grid-template-columns: 50% 50%;
-    grid-template-rows: auto auto;
-    grid-template-areas: "parrafo  slider" "mensaje  mensaje";
+    -ms-grid-columns: 50% 50%;
+        grid-template-columns: 50% 50%;
+    -ms-grid-rows: auto auto;
+        grid-template-rows: auto auto;
+        grid-template-areas: "parrafo  slider" "mensaje  mensaje";
   }
-
   .container-slider {
+    -ms-grid-row: 1;
+    -ms-grid-column: 2;
     grid-area: slider;
     margin: auto;
     width: 100%;
   }
-
   .parrafo {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
     grid-area: parrafo;
     width: 100%;
     margin: auto;
     z-index: 1;
   }
-
   .mensaje {
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 2;
     grid-area: mensaje;
     margin: auto;
     width: 50%;
   }
-
   .horarios h1 {
     margin: 20px auto;
     width: 70%;
@@ -572,33 +670,41 @@ $azulcl:rgba(76, 182, 198,.2); se reemplaso este variable en el mapa
     margin: 10px auto;
     width: 70%;
   }
-
   .contacto {
     width: 60%;
     margin: 20px auto;
   }
-
   .facturas {
     width: 50%;
     padding: 50px;
     margin: 100px auto;
   }
-
   /*-------------MENU-------------*/
   .resetas {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
-    flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
   .resetas div {
     width: 60%;
     height: 100%;
     overflow: hidden;
-    box-shadow: 6px 0px 16px rgba(0, 0, 0, 0.3);
+    -webkit-box-shadow: 6px 0px 16px rgba(0, 0, 0, 0.3);
+            box-shadow: 6px 0px 16px rgba(0, 0, 0, 0.3);
   }
   .resetas div div {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-self: center;
+    -ms-flex-item-align: center;
+        align-self: center;
     width: 90%;
     height: 70%;
   }
@@ -608,68 +714,108 @@ $azulcl:rgba(76, 182, 198,.2); se reemplaso este variable en el mapa
     width: 100%;
     height: 100%;
   }
-
   .postre {
     height: 1500px;
+    display: -ms-grid;
     display: grid;
-    grid-template-columns: auto;
-    grid-template-rows: auto auto auto auto auto;
-    grid-template-areas: "tituloPostre" " helados" "tartas" "crepas" "chocolates";
+    -ms-grid-columns: auto;
+        grid-template-columns: auto;
+    -ms-grid-rows: auto auto auto auto auto;
+        grid-template-rows: auto auto auto auto auto;
+        grid-template-areas: "tituloPostre" " helados" "tartas" "crepas" "chocolates";
     /* MODIFICANDO LOS CONTENEDORES DE LA CALSE POSTRE*/
   }
   .postre .tituloPos {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
     grid-area: tituloPostre;
   }
   .postre .helados {
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
     grid-area: helados;
+    display: -ms-grid;
     display: grid;
-    grid-template-columns: 50% 50%;
-    grid-template-rows: auto;
-    grid-template-areas: "img tex";
+    -ms-grid-columns: 50% 50%;
+        grid-template-columns: 50% 50%;
+    -ms-grid-rows: auto;
+        grid-template-rows: auto;
+        grid-template-areas: "img tex";
   }
   .postre .helados p {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
     grid-area: tex;
   }
   .postre .helados div {
+    -ms-grid-row: 1;
+    -ms-grid-column: 2;
     grid-area: img;
   }
   .postre .tartas {
+    -ms-grid-row: 3;
+    -ms-grid-column: 1;
     grid-area: tartas;
+    display: -ms-grid;
     display: grid;
-    grid-template-columns: 50% 50%;
-    grid-template-rows: auto;
-    grid-template-areas: "tex img ";
+    -ms-grid-columns: 50% 50%;
+        grid-template-columns: 50% 50%;
+    -ms-grid-rows: auto;
+        grid-template-rows: auto;
+        grid-template-areas: "tex img ";
   }
   .postre .tartas p {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
     grid-area: tex;
   }
   .postre .tartas div {
+    -ms-grid-row: 1;
+    -ms-grid-column: 2;
     grid-area: img;
   }
   .postre .crepas {
+    -ms-grid-row: 4;
+    -ms-grid-column: 1;
     grid-area: crepas;
+    display: -ms-grid;
     display: grid;
-    grid-template-columns: 50% 50%;
-    grid-template-rows: auto;
-    grid-template-areas: "img tex";
+    -ms-grid-columns: 50% 50%;
+        grid-template-columns: 50% 50%;
+    -ms-grid-rows: auto;
+        grid-template-rows: auto;
+        grid-template-areas: "img tex";
   }
   .postre .crepas p {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
     grid-area: tex;
   }
   .postre .crepas div {
+    -ms-grid-row: 1;
+    -ms-grid-column: 2;
     grid-area: img;
   }
   .postre .chocolates {
+    -ms-grid-row: 5;
+    -ms-grid-column: 1;
     grid-area: chocolates;
+    display: -ms-grid;
     display: grid;
-    grid-template-columns: 50% 50%;
-    grid-template-rows: auto;
-    grid-template-areas: "tex img ";
+    -ms-grid-columns: 50% 50%;
+        grid-template-columns: 50% 50%;
+    -ms-grid-rows: auto;
+        grid-template-rows: auto;
+        grid-template-areas: "tex img ";
   }
   .postre .chocolates p {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
     grid-area: tex;
   }
   .postre .chocolates div {
+    -ms-grid-row: 1;
+    -ms-grid-column: 2;
     grid-area: img;
   }
   .postre div {
@@ -688,6 +834,7 @@ $azulcl:rgba(76, 182, 198,.2); se reemplaso este variable en el mapa
     border-radius: 20px;
   }
 }
+
 /*ESTE MIXIN LO UTILICE PARA LOS ESTILOS DE LA ETIQUETA P CON LA CLECE MENSAJE */
 /*estilos generales para los textos*/
 /*
@@ -698,7 +845,7 @@ $azulcl:rgba(76, 182, 198,.2); se reemplaso este variable en el mapa
 */
 /*VARIABLES PARA LAS OPERACIONES*/
 /*MAPAS:  este mapa se lo aplique al nav y al footer */
-.textos, .menu p, .resetas p:first-child, .parrafo {
+.textos, .parrafo, .resetas p:first-child, .menu p {
   font-family: "Rubik Puddles", cursive;
   color: black;
   text-align: center;
@@ -707,7 +854,8 @@ $azulcl:rgba(76, 182, 198,.2); se reemplaso este variable en el mapa
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 body {
@@ -717,9 +865,11 @@ body {
 nav {
   background-color: rgba(76, 182, 198, 0.2);
 }
+
 nav div a {
   font-family: "Fascinate Inline", cursive;
 }
+
 nav div div ul li a {
   font-family: "Rubik Puddles", cursive;
   color: white;
@@ -732,15 +882,20 @@ nav div div ul li a {
   width: 600px;
   overflow: hidden;
 }
+
 .container-slider ul li {
   list-style: none;
 }
+
 .container-slider .slider {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   -webkit-animation: cambio 20s infinite alternate linear;
           animation: cambio 20s infinite alternate linear;
   width: 400%;
 }
+
 .container-slider .slider li {
   width: 100%;
   height: inherit;
@@ -748,6 +903,7 @@ nav div div ul li a {
   margin: 50px;
   padding: 10px;
 }
+
 .container-slider .slider li img {
   width: 100%;
   height: 300px;
@@ -809,4 +965,6 @@ nav div div ul li a {
     margin-left: -300%;
   }
 }
-/*EXTENDS*//*# sourceMappingURL=styles.css.map */
+
+/*EXTENDS*/
+/*# sourceMappingURL=styles.css.map */
