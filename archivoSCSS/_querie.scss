@@ -13,6 +13,11 @@
     }
     
     /*======================INDEX======================*/
+.navbar-expand-lg{
+    z-index: 100;
+}
+
+
     .contenido{
         width: 100%;
         height: auto;
@@ -149,17 +154,11 @@
             font-size: 1.6rem;
         }
 
-        /*AL PARRAFO LE AGREGUE EL MIXIN y comente los valores ateriores*/
+        /*AL PARRAFO LE AGREGUE EL MIXIN*/
         p{
             @include texto (black,$font2);
         }
-        /*
-        p{  
-            padding: auto;
-            margin: 40px;
-            font-family: $font2;
-            letter-spacing: 2px;
-        }*/
+       
 
         
     }
