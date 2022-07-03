@@ -10,11 +10,7 @@
     "type": "git",
     "url": "git+https://github.com/jose98-art/proyectoCARIBE.git"
   },
-<<<<<<< HEAD
-  "author": "JoseSantiagoVazquez",
-=======
   "author": "Jose Santiago Vazquez",
->>>>>>> 2d9c1b3c8f65205e96ce4c964b22f2cfef3d4398
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/jose98-art/proyectoCARIBE/issues"
