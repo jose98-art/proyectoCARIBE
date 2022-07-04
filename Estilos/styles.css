@@ -323,6 +323,7 @@ $azulcl:rgba(76, 182, 198,.2); se reemplaso este variable en el mapa
     height: 300px;
     margin: 5px;
     margin-bottom: 0;
+    background-color: transparent;
   }
   .postre div div img {
     -o-object-fit: cover;
@@ -429,6 +430,10 @@ $azulcl:rgba(76, 182, 198,.2); se reemplaso este variable en el mapa
     cursor: pointer;
   }
   /*============CONTACTO===============*/
+  .container-fluid {
+    padding-bottom: 45px;
+    margin-bottom: 0;
+  }
   .contacto {
     width: 100%;
     border: 4px solid #4ae7ff;

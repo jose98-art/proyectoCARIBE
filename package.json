@@ -1,7 +1,7 @@
 {
   "name": "proyectocaribe",
   "version": "1.0.0",
-  "description": "proyecto de una pagina de restaurante",
+  "description": "proyecto de restaurante marisqueria",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -10,7 +10,7 @@
     "type": "git",
     "url": "git+https://github.com/jose98-art/proyectoCARIBE.git"
   },
-  "author": "Jose Santiago Vazquez",
+  "author": "josesantiagovazquez",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/jose98-art/proyectoCARIBE/issues"

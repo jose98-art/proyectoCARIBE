@@ -280,6 +280,7 @@
                 height: $largo - 700px;
                 margin: $margin ;
                 margin-bottom: 0;
+                background-color: transparent;
                 img{
                     object-fit: cover;
                     width: $ancho2 - 40%;
@@ -379,6 +380,10 @@
     }
 
     /*============CONTACTO===============*/
+    .container-fluid{
+        padding-bottom: 45px;
+        margin-bottom: 0;
+    }
 
     .contacto{
         width: 100%;
