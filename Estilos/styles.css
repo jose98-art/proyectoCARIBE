@@ -27,6 +27,9 @@ $azulcl:rgba(76, 182, 198,.2); se reemplaso este variable en el mapa
   .navbar-expand-lg {
     z-index: 100;
   }
+  .nav-link {
+    font-family: "Fascinate Inline", cursive;
+  }
   .contenido {
     width: 100%;
     height: auto;
@@ -633,6 +636,9 @@ $azulcl:rgba(76, 182, 198,.2); se reemplaso este variable en el mapa
 
 /*=============PARA PANTALLAS A MAS DE 1000PX==========*/
 @media screen and (min-width: 1000px) {
+  .nav-link {
+    font-family: "Rubik Puddles", cursive;
+  }
   .contenido {
     width: 90%;
     margin: auto;
@@ -882,10 +888,6 @@ nav div a {
 
 nav div div ul li .nav-link {
   color: #ffffff;
-}
-
-nav div div ul li a {
-  font-family: "Rubik Puddles", cursive;
 }
 
 .container-slider {

@@ -16,6 +16,9 @@
 .navbar-expand-lg{
     z-index: 100;
 }
+.nav-link{
+    font-family: $font1;
+}
 
 
     .contenido{
@@ -547,6 +550,9 @@
 
 /*=============PARA PANTALLAS A MAS DE 1000PX==========*/
 @media screen and (min-width: 1000px) {
+    .nav-link{
+        font-family: $font2;
+    }
     .contenido{
         width: 90%;
         margin: auto;
