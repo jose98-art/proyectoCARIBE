@@ -5,14 +5,13 @@ $font3: 'Courier New', Courier, monospace;
 $azulC:#4ae7ff; se reemplaso este variable en el mapa 
 */
 $azulF:#0f206c;
-$blanc:white;
-$Negro:black;
+$blanc:#ffffff;
+$Negro:#000000;
 /*
 $azulcl:rgba(76, 182, 198,.2); se reemplaso este variable en el mapa 
 */
-$gris:rgba(242,242,242,.4);
+$gris:rgba(145, 149, 160,.4);
 $colorf:rgb(242,242,242);
-
 
 /*VARIABLES PARA LAS OPERACIONES*/
 $size:1em;
@@ -26,7 +25,6 @@ $largo2:100%;
 
 $margin:5px;
 
-
 /*MAPAS:  este mapa se lo aplique al nav y al footer */
-$coloresPrincipales:(header:rgba(76, 182, 198,.2) ,footer:#4ae7ff  );
+$coloresPrincipales:(header:rgb(80, 168, 234)  ,footer:rgba(44, 50, 70,.97) );
 

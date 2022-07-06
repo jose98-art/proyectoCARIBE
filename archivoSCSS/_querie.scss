@@ -165,9 +165,8 @@
 
     /*======================MENU======================*/
     .menu{
-        background-color: $colorf;
+        background-color: $gris;
         margin-top: 5px;
-        border: 1px solid map-get($map: $coloresPrincipales, $key:footer );
         a{
             text-align: center;
             border-bottom: 2px double map-get($map: $coloresPrincipales, $key:footer );
@@ -202,8 +201,7 @@
                 margin: 10px;
                 overflow: hidden;
                 box-shadow: 6px 0px 16px rgba(0,0,0,.3);
-                background-color: $colorf;
-                border: .90px solid map-get($map: $coloresPrincipales, $key:footer );
+                background-color: $gris;
 
                 p:first-child{
                     font-size: 1rem;
@@ -265,7 +263,7 @@
             align-items: center;
             justify-content: center;
             border-radius: 10px;
-            background-color: $gris;
+            background-color: $colorf;
             cursor: pointer;
             p{
                 text-align: center;
@@ -293,7 +291,7 @@
         }
     }
 
-    /*============NSOTROS===============*/
+    /*============NOSOTROS===============*/
     .nosotros{
         width: 100%;
         div{
@@ -307,7 +305,7 @@
                 text-align: center;
             }
             div{
-                background-color: $colorf;
+                background-color: $gris;
                 width: 100%;
                 height: 400px;
                 margin: 10px 0 10px 0;
@@ -347,7 +345,7 @@
             text-align: center;
             font-size: 1.3rem;
             font-family: $font2;
-            background-color: $colorf;
+            background-color: $gris;
 
             p{
                 font-size: 1rem;
@@ -360,7 +358,7 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            background-color: $colorf;
+            background-color: $gris;
             padding: 10px;
             
             h2{
@@ -371,10 +369,10 @@
             p{ 
                 text-align: center;
                 width:70%;
-                border-bottom: 3px double map-get($map: $coloresPrincipales, $key:footer );
             }
             button{
                 cursor: pointer;
+                background-color: map-get($map: $coloresPrincipales, $key:header );
             }
         }
     }
@@ -387,16 +385,14 @@
 
     .contacto{
         width: 100%;
-        border: 4px solid map-get($map: $coloresPrincipales, $key:footer );
         margin: 10px 0px;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        background-color: $colorf;
+        background-color: $gris;
         div{
             width: 50%;
-            border-bottom: 3px double map-get($map: $coloresPrincipales, $key:footer );
             p{
                 text-align: center;
                 a{
@@ -411,7 +407,7 @@
     /*============FACTURAS===============*/
 
     .facturas{
-        background-color: $colorf;
+        background-color: $gris;
         width: 100%;
         margin: 25px auto;
         .row{
@@ -435,7 +431,11 @@
                 overflow: hidden;
                 p{
                     label{
+                        .file{
+                            font-size: 1rem;
+                        }
                         button{
+                            background-color: map-get($map: $coloresPrincipales, $key:header );
                             margin-top: 10px;
                             text-align: center;
                             margin-left: auto;
@@ -537,6 +537,7 @@
         }
         .parrD{
             font-size: .9rem;
+            color: $blanc;
         }
 
     }

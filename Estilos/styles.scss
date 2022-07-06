@@ -22,6 +22,9 @@ nav{
     
     
     div{
+        .navbar-brand{
+            color: $blanc;
+        }
 
       a{
 
@@ -32,9 +35,11 @@ nav{
 
             ul{
                 li{
+                    .nav-link{
+                        color: $blanc;
+                    }
                     a{
                         font-family: $font2;
-                        color: $blanc;
                     }
                 }
             }
