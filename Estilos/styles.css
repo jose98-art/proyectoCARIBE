@@ -462,6 +462,14 @@ $azulcl:rgba(76, 182, 198,.2); se reemplaso este variable en el mapa
   .contacto div p a {
     color: #000000;
   }
+  .contacto .buEnviar {
+    padding: 6px;
+    width: 100px;
+    background-color: #50a8ea;
+    border: none;
+    border-radius: 5px;
+    margin-bottom: 5px;
+  }
   /*============FACTURAS===============*/
   .facturas {
     background-color: rgba(145, 149, 160, 0.4);
